@@ -1,9 +1,9 @@
-const express = require("express")
-const helmet = require("helmet")
-const compression = require("compression")
+import express from "express"
+import helmet from "helmet"
+import compression from "compression"
 
-const config = require("../config")
-const webpackConfig = require("../webpack.config")
+import {config} from "../config"
+import webpackConfig from "../webpack.config"
 
 const app = express()
 app.set("view engine", "pug")

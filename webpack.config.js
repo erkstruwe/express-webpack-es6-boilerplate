@@ -3,7 +3,7 @@ const path = require("path")
 module.exports = {
     mode: process.env.NODE_ENV || "development",
     entry: {
-        index: "./client/index.js",
+        index: "./client/index.mjs",
     },
     output: {
         path: path.join(__dirname, "public/generated"),
