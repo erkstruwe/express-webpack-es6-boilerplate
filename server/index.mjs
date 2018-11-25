@@ -12,6 +12,7 @@ app.locals.webpackConfig = webpackConfig
 app.use(helmet())
 app.use(compression())
 
+app.get("/health", (req, res) => res.send("ok"))
 app.get("/", (req, res) => res.render("index"))
 app.use("/public", express.static("public", {index: false, maxAge: 60 * 60 * 24 * 10}))
 
