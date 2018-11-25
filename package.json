@@ -11,7 +11,9 @@
     "start:dev:client": "webpack-dev-server --hot",
     "lint": "eslint --ignore-pattern public/generated .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "preversion": "npm test",
+    "postversion": "git push origin master --follow-tags"
   },
   "author": "Erk Struwe <estruwe@estruwe.de>",
   "license": "ISC",
