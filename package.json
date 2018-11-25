@@ -2,14 +2,14 @@
   "name": "javascript-101",
   "version": "0.1.0",
   "description": "A basic express and webpack boilerplate",
-  "main": "server.js",
+  "main": "server/index.js",
   "scripts": {
     "postinstall": "webpack --mode production",
-    "start": "node server.js",
+    "start": "node server/index.js",
     "start:dev": "concurrently --prefix name --names server,client \"npm run start:dev:server\" \"npm run start:dev:client\"",
     "start:dev:server": "nodemon --ignore client --ignore views --ignore public",
     "start:dev:client": "webpack-dev-server --hot",
-    "lint": "eslint .",
+    "lint": "eslint --ignore-pattern public/generated .",
     "test": "npm run lint"
   },
   "author": "Erk Struwe <estruwe@estruwe.de>",

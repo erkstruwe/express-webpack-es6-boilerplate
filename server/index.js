@@ -1,7 +1,7 @@
 const express = require("express")
 
-const config = require("./config")
-const webpackConfig = require("./webpack.config")
+const config = require("../config")
+const webpackConfig = require("../webpack.config")
 
 const app = express()
 app.set("view engine", "pug")
