@@ -1,12 +1,14 @@
 const express = require("express")
-const webpack = require("webpack")
-const webpackDevMiddleware = require("webpack-dev-middleware")
+
+const config = require("./config")
+const webpackConfig = require("./webpack.config")
 
 const app = express()
-const webpackConfig = require("./webpack.config.js")
-const compiler = webpack(webpackConfig)
+app.set("view engine", "pug")
+app.locals.config = config
+app.locals.webpackConfig = webpackConfig
 
-app.use(express.static("public"))
-app.use(webpackDevMiddleware(compiler, {publicPath: webpackConfig.output.publicPath}))
+app.get("/", (req, res) => res.render("index"))
+app.use("/public", express.static("public"))
 
-app.listen(3000, () => console.log("server listening on http://localhost:3000/"))
+app.listen(config.port, () => console.log(`server listening on http://localhost:${config.port}/ in ${config.mode} mode`))
