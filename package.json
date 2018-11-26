@@ -13,9 +13,10 @@
     "start:dev": "concurrently --prefix name --names server,client \"npm run start:dev:server\" \"npm run start:dev:client\"",
     "start:dev:server": "forever --minUptime 1000 --spinSleepTime 1000 --watch --watchDirectory server -c \"node --experimental-modules server/index.mjs\" ./",
     "start:dev:client": "webpack-dev-server --hot",
+    "test": "npm run lint && npm run unit",
     "lint": "eslint --ignore-pattern public/generated .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint",
+    "unit": "jasmine --config=jasmine.json",
     "preversion": "npm test",
     "postversion": "git push origin master --follow-tags"
   },
@@ -44,7 +45,9 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "eslint": "^5.9.0",
+    "eslint-plugin-jasmine": "^2.10.1",
     "forever": "^0.15.3",
+    "jasmine-es6": "^0.4.3",
     "webpack-dev-server": "^3.1.10"
   }
 }
