@@ -1,5 +1,5 @@
-# JavaScript 101
-A basic express and webpack boilerplate
+# express-webpack-es6-boilerplate
+A basic express and webpack boilerplate using ES6 JavaScript modules
 
 ## Install
 ```
