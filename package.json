@@ -1,6 +1,6 @@
 {
   "name": "express-webpack-es6-boilerplate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A basic express and webpack boilerplate using ES6 JavaScript modules",
   "main": "server/index.mjs",
   "engines": {
