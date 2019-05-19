@@ -1,7 +1,10 @@
-import webpackConfig from "./webpack.config"
+import webpackConfigFactory from "./webpack.config"
 
-export const config = {}
-config.mode = webpackConfig.mode
+const config = {}
+config.mode = process.env.NODE_ENV || "development"
 config.port = process.env.PORT || 3000
 
-config.urlPrefix = config.mode === "development" ? `http://localhost:${webpackConfig.devServer.port}` : ""
+config.webpackConfig = webpackConfigFactory({}, {mode: config.mode})
+config.urlPrefix = config.mode === "development" ? `http://localhost:${config.webpackConfig.devServer.port}` : ""
+
+export default config

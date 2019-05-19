@@ -2,13 +2,11 @@ import express from "express"
 import helmet from "helmet"
 import compression from "compression"
 
-import {config} from "../config"
-import webpackConfig from "../webpack.config"
+import config from "../config"
 
 const app = express()
 app.set("view engine", "pug")
 app.locals.config = config
-app.locals.webpackConfig = webpackConfig
 app.use(helmet())
 app.use(compression())
 

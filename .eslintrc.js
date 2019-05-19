@@ -3,16 +3,12 @@ module.exports = {
         "browser": true,
         "es6": true,
         "node": true,
-        "jasmine": true,
     },
     "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 2018,
     },
-    "plugins": [
-        "jasmine",
-    ],
     "rules": {
         "indent": [
             "error",

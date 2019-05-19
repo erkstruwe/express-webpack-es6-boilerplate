@@ -14,11 +14,9 @@ export async function getMakes() {
 }
 
 export async function getModelsByMakeId(makeId) {
-    // TODO: https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/440?format=json
-    return [
-        {id: 1, name: "V8 Vantage"},
-        {id: 2, name: "V12 Ultra"},
-    ]
+    const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${makeId}?format=json`)
+    const json = response.json()
+    return json
 }
 
 export async function imageUrl(query) {
