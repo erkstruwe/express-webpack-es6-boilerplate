@@ -1,6 +1,6 @@
 {
   "name": "express-webpack-es6-boilerplate",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A basic express and webpack boilerplate using ES6 JavaScript modules",
   "author": "Erk Struwe <estruwe@estruwe.de>",
   "license": "ISC",
