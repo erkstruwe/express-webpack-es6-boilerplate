@@ -2,11 +2,9 @@
   "name": "express-webpack-es6-boilerplate",
   "version": "0.2.1",
   "description": "A basic express and webpack boilerplate using ES6 JavaScript modules",
+  "author": "Erk Struwe <estruwe@estruwe.de>",
+  "license": "ISC",
   "main": "server/index.mjs",
-  "engines": {
-    "node": "^10.15.3",
-    "npm": "^6.4.1"
-  },
   "scripts": {
     "postinstall": "webpack --mode production",
     "start": "cross-env NODE_ENV=production node --experimental-modules server/index.mjs",
@@ -19,8 +17,10 @@
     "preversion": "npm test",
     "postversion": "git push origin master --follow-tags"
   },
-  "author": "Erk Struwe <estruwe@estruwe.de>",
-  "license": "ISC",
+  "engines": {
+    "node": "^10.15.3",
+    "npm": "^6.4.1"
+  },
   "dependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
